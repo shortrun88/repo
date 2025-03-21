@@ -1,14 +1,10 @@
-/* Stile base */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   background-color: #D1E1E1;
   color: #222;
-  line-height: 1.6;
-  text-align: center;
 }
 
-/* Header */
 header {
   background-color: #222;
   padding: 1em;
@@ -23,24 +19,20 @@ header h1 {
   letter-spacing: 2px;
 }
 
-/* Menu di navigazione */
 nav {
   margin-top: 0.5em;
 }
 
 nav a {
-  display: inline-block;
-  padding: 0.5em 1em;
-  font-size: 1.2em;
   color: #F26430;
   text-decoration: none;
+  margin: 0 10px;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Contenuto principale */
 main {
   padding: 2em;
   max-width: 800px;
@@ -48,7 +40,6 @@ main {
   text-align: center;
 }
 
-/* Stile per la locandina */
 .poster {
   max-width: 100%;
   height: auto;
@@ -56,7 +47,6 @@ main {
   box-shadow: 0 0 20px #F2643044;
 }
 
-/* Footer */
 footer {
   background-color: #222;
   text-align: center;
@@ -66,23 +56,3 @@ footer {
   margin-top: 2em;
 }
 
-/* 🟢 MEDIA QUERY: Adattamento per smartphone */
-@media screen and (max-width: 600px) {
-  main {
-    padding: 1em;
-  }
-
-  header h1 {
-    font-size: 1.8em;
-  }
-
-  nav {
-    margin: 0;
-  }
-
-  nav a {
-    display: block;
-    padding: 10px;
-    font-size: 1.1em;
-  }
-}
