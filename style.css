@@ -1,25 +1,12 @@
-/* Landing page fullscreen con locandina responsive */
+/* Landing page fullscreen con locandina che riempie tutto, scrollabile */
 body.landing {
   margin: 0;
   padding: 0;
-  background: black;
-  height: 100vh;
+  background: url('locandinapoli.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
   width: 100%;
-  overflow: hidden;
   position: relative;
-}
-
-body.landing::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('locandinapoli.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  z-index: 0;
 }
 
 /* Link "Info" in alto a destra */
