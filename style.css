@@ -1,15 +1,33 @@
-/* Landing page fullscreen con locandina che riempie tutto, scrollabile */
+/* Landing page con locandina centrata e cornice */
 body.landing {
   margin: 0;
   padding: 0;
-  background: url('locandinapoli.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-color: #111;
   min-height: 100vh;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
+  text-align: center;
 }
 
-/* Link "Info" in alto a destra */
+.poster-wrapper {
+  max-width: 100%;
+  padding: 10px;
+  border: 6px solid #F26430; /* Cornice arancione */
+  box-sizing: border-box;
+  margin: 40px 20px;
+}
+
+.poster-img {
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  display: block;
+}
+
+/* Link Info */
 .info-link {
   position: absolute;
   top: 20px;
@@ -30,75 +48,11 @@ body.landing {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* Pagina info (resto del sito) */
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #D1E1E1;
-  color: #222;
-  line-height: 1.6;
-  margin: 0;
-  text-align: center;
-}
-
-header {
-  background-color: #222;
-  padding: 1em;
-  text-align: center;
-  color: white;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-nav {
-  margin-top: 0.5em;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0.5em 1em;
-  font-size: 1.2em;
-  color: #F26430;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-main {
-  padding: 2em;
-  max-width: 800px;
-  margin: auto;
-}
-
-footer {
-  background-color: #222;
-  text-align: center;
-  padding: 1em;
-  font-size: 0.9em;
-  color: white;
-  margin-top: 2em;
-}
-
-/* Mobile friendly */
+/* Mobile */
 @media screen and (max-width: 600px) {
-  main {
-    padding: 1em;
-  }
-
-  header h1 {
-    font-size: 1.8em;
-  }
-
-  nav a {
-    display: block;
-    padding: 10px;
-    font-size: 1.1em;
+  .poster-wrapper {
+    margin: 20px 10px;
+    border-width: 4px;
   }
 
   .info-link {
