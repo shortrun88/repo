@@ -1,110 +1,79 @@
-/* Landing page fullscreen con locandina che riempie tutto, scrollabile */
-body.landing {
+* {
   margin: 0;
   padding: 0;
-  background: url('locandinapoli.jpg') no-repeat center center fixed;
-  background-size: cover;
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
+  box-sizing: border-box;
 }
 
-/* Link "Info" in alto a destra */
-.info-link {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #F26430;
-  text-decoration: none;
-  font-size: 1.2em;
-  font-weight: bold;
-  backdrop-filter: blur(4px);
-  transition: background 0.3s ease;
-  z-index: 1;
-}
-
-.info-link:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-/* Pagina info (resto del sito) */
-body {
+body, html {
+  height: 100%;
   font-family: 'Helvetica Neue', sans-serif;
-  background-color: #D1E1E1;
-  color: #222;
-  line-height: 1.6;
-  margin: 0;
-  text-align: center;
-}
-
-header {
-  background-color: #222;
-  padding: 1em;
-  text-align: center;
-  color: white;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 nav {
-  margin-top: 0.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 10;
 }
 
 nav a {
-  display: inline-block;
-  padding: 0.5em 1em;
-  font-size: 1.2em;
-  color: #F26430;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-main {
-  padding: 2em;
-  max-width: 800px;
-  margin: auto;
-}
-
-footer {
-  background-color: #222;
-  text-align: center;
-  padding: 1em;
-  font-size: 0.9em;
   color: white;
-  margin-top: 2em;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
 }
 
-/* Mobile friendly */
-@media screen and (max-width: 600px) {
-  main {
-    padding: 1em;
-  }
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
 
-  header h1 {
-    font-size: 1.8em;
+.hero {
+  background: url('../images/picture1.jpg') center center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.content {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
   }
 
   nav a {
-    display: block;
-    padding: 10px;
-    font-size: 1.1em;
+    margin: 10px 0;
   }
 
-  .info-link {
-    font-size: 1em;
-    padding: 8px 16px;
-    top: 15px;
-    right: 20px;
+  .hero {
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
   }
 }
